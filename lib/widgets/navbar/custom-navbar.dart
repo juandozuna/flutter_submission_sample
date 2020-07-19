@@ -4,7 +4,7 @@ import 'package:sample_screens/theme.dart';
 
 class CustomNavbar extends StatelessWidget {
 
-  Widget _buildMenuItem(IconData icon, String title, Function onPress, [bool isActive = false]) {
+  Widget _buildMenuItem(IconData icon, String title, Function onPress, [bool isActive = false]q) {
     Color color = isActive ? Colors.black : Colors.black.withOpacity(0.4);
     return Container(
       child: Column(
