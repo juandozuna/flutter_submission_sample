@@ -32,6 +32,9 @@ class TransactionAvatar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final hasImage = _transaction.imageUrl != null && _transaction.imageUrl.isNotEmpty;
-    return ClipOval(child: hasImage ? _buildAvatarWithUrl() : _buildGeneratedAvatar(context));
+    return Container(
+      width:55,
+      child: ClipOval(child: hasImage ? _buildAvatarWithUrl() : _buildGeneratedAvatar(context)),
+    );
   }
 }

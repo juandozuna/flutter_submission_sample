@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:sample_screens/widgets/balance-jumbotron.dart';
+import 'package:sample_screens/widgets/monthly-summaries-horizontal-list.dart';
 import 'package:sample_screens/widgets/transaction-list.dart';
 
 class HomePage extends StatelessWidget {
@@ -12,7 +13,11 @@ class HomePage extends StatelessWidget {
       children: <Widget>[
         SizedBox(height: Platform.isIOS ? 45 : 40),
         BalanceJumbotron(),
-        Expanded(child: TransactionList())
+        Expanded(child: TransactionList()),
+        Container(
+          height: 80,
+          child: MonthlySummariesHorizontalList(),
+        )
       ],
     );
   }
@@ -23,4 +28,4 @@ class HomePage extends StatelessWidget {
       body: _buildBody(),
     );
   }
-} 
+}
